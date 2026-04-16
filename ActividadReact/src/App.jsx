@@ -4,6 +4,14 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
 function Contador() {
   const [count, setCount] = useState(0);
 
@@ -37,7 +45,91 @@ function Contador() {
   );
 }
 
+function createData(Nombre, Apellido, Edad) {
+  return { Nombre, Apellido, Edad };
+}
+
+const Personas = [
+  {
+    Nombre: 'Daniel',
+    Apellido: 'Jimenez', 
+    Edad: 22
+  },
+  {
+     Nombre: 'Hector',
+    Apellido: 'Lopez', 
+    Edad: 15
+  },
+    {
+
+     Nombre: 'Mario',
+    Apellido: 'Chavez', 
+    Edad: 13
+    },
+    {
+
+     Nombre: 'Santiago',
+    Apellido: 'Hernandez', 
+    Edad: 22
+    },
+    {
+
+     Nombre: 'Carlos',
+    Apellido: 'Osuna', 
+    Edad: 11
+    },
+    {
+
+     Nombre: 'Valeria',
+    Apellido: 'Yogurt', 
+    Edad: 21
+    },
+    {
+
+     Nombre: 'Hugo',
+    Apellido: 'Sanchez', 
+    Edad: 26
+    },
+] 
+const rows = [];
+
+Personas.forEach(Persona => {
+  rows.push(createData(Persona.Nombre, Persona.Apellido, Persona.Edad))
+})
+
+function DenseTable() {
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Nombre</TableCell>
+            <TableCell align="right">Apellido</TableCell>
+            <TableCell align="right">Edad</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow
+              key={row.Nombre}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+              <TableCell component="th" scope="row">
+                {row.Nombre}
+              </TableCell>
+              <TableCell align="right">{row.Apellido}</TableCell>
+              <TableCell align="right">{row.Edad}</TableCell>
+              
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}
+
 function App() {
+  const {count, setCount} = useState(0)
   return (
     <>
       <section id="center">
@@ -57,6 +149,7 @@ function App() {
 
       </section>
 
+      <DenseTable /> 
       <div className="ticks"></div>
 
       <section id="next-steps">
