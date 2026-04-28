@@ -1,4 +1,8 @@
+import { useAlumnoContext } from "../context/AlumnoContext";
+
 function Acerca() {
+  const { alumno } = useAlumnoContext();
+  
   return (
     <div>
       <h1>Acerca de mí</h1>

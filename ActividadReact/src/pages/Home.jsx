@@ -2,15 +2,30 @@ import { useState, useEffect } from 'react'
 import reactLogo from '../assets/react.svg'
 import viteLogo from '../assets/vite.svg'
 import heroImg from '../assets/hero.png'
+import {PerfilResumen} from "../components/PerfilResumen";
 import '../App.css'
 
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import {
+   Table,
+   TableBody,
+   TableCell,
+   TableContainer,
+   TableHead,
+   TableRow,
+   Paper
+} from '@mui/material';
+
+ export function Home(){
+  return (
+    <div>
+        <h1>Inicio </h1>
+        <PerfilResumen  />
+    </div>
+
+  );
+ }
+
+
 
 function Contador() {
   const [count, setCount] = useState(0);

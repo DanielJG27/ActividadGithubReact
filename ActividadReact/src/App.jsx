@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import './index.css';
- import Home from "./pages/Home";
+ import {Home} from "./pages/Home";
 import Acerca from "./pages/Acerca.jsx";
 // import Contacto from "./pages/Contacto";
 import Tablas from "./pages/Tablas.jsx";
