@@ -4,10 +4,10 @@ const AlumnoContext = createContext();
 
 export function AlumnoProvider({ children }) {
   const [alumno] = useState({
-    nombre: "Jesus Daniel Jimenez Guerrero",
-    carrera: "Licenciatura en Informática",
-    grupo: "4-1",
-    semestre: "8vo"
+    nombre: "Nombre: Jesus Daniel Jimenez Guerrero",
+    carrera: "Carrera: Licenciatura en Informática",
+    grupo: "Grupo: 4-1",
+    semestre: "Semestre: 8vo"
   });
 
   return (

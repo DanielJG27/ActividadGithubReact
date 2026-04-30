@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import reactLogo from '../assets/react.svg'
 import viteLogo from '../assets/vite.svg'
 import heroImg from '../assets/hero.png'
-import {PerfilResumen} from "../components/PerfilResumen";
+import PerfilResumen from "../components/PerfilResumen";
 import '../App.css'
 
 import {
@@ -20,6 +20,13 @@ import {
     <div>
         <h1>Inicio </h1>
         <PerfilResumen  />
+
+      <img
+       src="..\public\wan.jpg"
+        alt="Wan"
+      />
+      
+
     </div>
 
   );

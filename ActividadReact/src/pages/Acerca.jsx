@@ -1,4 +1,5 @@
 import { useAlumnoContext } from "../context/AlumnoContext";
+import PerfilResumen from "../components/PerfilResumen";
 
 function Acerca() {
   const { alumno } = useAlumnoContext();
@@ -17,6 +18,9 @@ function Acerca() {
         a los gustos del cliente, es una buena oportunidad para explorar tanto la creatividad como las habilidades tecnicas de un programador.
         Me gustaria conseguir un trabajo en esta area en un futuro cercano, para asi conseguir mas experiencia y mejorar mis habilidades.
       </p>
+    <div>
+      <PerfilResumen />
+    </div>
 
       <h3>Habilidades</h3>
       <ul>
