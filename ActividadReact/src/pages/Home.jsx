@@ -16,6 +16,7 @@ import {
 } from '@mui/material';
 
  export function Home(){
+
   return (
     <div>
         <h1>Inicio </h1>

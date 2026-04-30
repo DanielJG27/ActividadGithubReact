@@ -1,16 +1,17 @@
 import { useAlumnoContext } from "../context/AlumnoContext";
-import PerfilResumen from "../components/PerfilResumen";
-
 function Acerca() {
   const { alumno } = useAlumnoContext();
   
+  const {nombre, carrera, grupo, semestre} = alumno; 
   return (
     <div>
       <h1>Acerca de mí</h1>
 
-      <p><strong>Nombre:</strong> Jesus Daniel Jimenez Guerrero</p>
-      <p><strong>Carrera:</strong> Licenciatura en informatica </p>
-
+      <p><strong>Nombre:</strong> {nombre} </p>
+      <p><strong>Carrera:</strong>{carrera} </p>
+      <p><strong>Grupo:</strong>{grupo} </p>
+      <p><strong>Semestre:</strong>{semestre} </p>
+      
       <p>
         Soy Jesus Daniel, tengo 22 años. Soy estudiante proximo a egresar de la carrera de licenciatura en informatica,
         me encuentro actualmente cursando el ultimo semestre de mi cuarto año, estoy altamente interesado en el desarrollo web,
@@ -18,9 +19,6 @@ function Acerca() {
         a los gustos del cliente, es una buena oportunidad para explorar tanto la creatividad como las habilidades tecnicas de un programador.
         Me gustaria conseguir un trabajo en esta area en un futuro cercano, para asi conseguir mas experiencia y mejorar mis habilidades.
       </p>
-    <div>
-      <PerfilResumen />
-    </div>
 
       <h3>Habilidades</h3>
       <ul>
