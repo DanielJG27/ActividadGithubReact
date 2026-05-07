@@ -6,6 +6,7 @@ import Acerca from "./pages/Acerca.jsx";
 import Tablas from "./pages/Tablas.jsx";
 import Navbar from "./components/Navbar";
 import Usuarios from "./pages/Usuarios";
+import EditarAlumno from "./pages/EditarAlumno"; 
 
 
 //importar de Usuario.jsx a App.jsx
@@ -21,6 +22,8 @@ function App() {
         {/* <Route path="/contacto" element={<Contacto />} /> */}
         <Route path="/tablas" element={<Tablas />} />
         <Route path="/usuarios" element={<Usuarios />} />
+        <Route path="/editar-alumno" element={<EditarAlumno />} />
+
         
       </Routes>
     </>
